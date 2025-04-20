@@ -15,14 +15,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-Qh-m9W">
+                                <rect key="frame" x="172" y="411" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-k5-Bzq">
+                                <rect key="frame" x="269" y="314" width="116" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to Green"/>
+                                <connections>
+                                    <action selector="greenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSx-IF-Vr3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N43-UG-7Fv">
+                                <rect key="frame" x="28" y="314" width="119" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to Yellow"/>
+                                <connections>
+                                    <action selector="yellowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Azm-ec-hfB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Red" largeTitleDisplayMode="always" id="tsy-U7-hlz"/>
+                    <connections>
+                        <outlet property="segueSwitch" destination="uIB-Qh-m9W" id="L3U-zM-Nqf"/>
+                        <segue destination="Szd-H2-OWc" kind="show" identifier="yellow" id="vEH-hp-eQu"/>
+                        <segue destination="Qei-yD-qmX" kind="show" identifier="green" id="xdC-Sl-3ag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046.5648854961833" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="973" y="6"/>
         </scene>
         <!--Yellow-->
         <scene sceneID="ZeZ-As-756">
@@ -38,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5y-5c-bEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724.4274809160304" y="6.3380281690140849"/>
+            <point key="canvasLocation" x="1763" y="-292"/>
         </scene>
         <!--Green-->
         <scene sceneID="A2p-H7-3nZ">
@@ -54,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81u-d5-mXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354.9618320610684" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1763" y="363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ODD-Xs-LtS">

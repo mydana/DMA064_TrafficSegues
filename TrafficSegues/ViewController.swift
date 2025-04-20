@@ -14,8 +14,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.navigationItem.title = textField.text
+    @IBOutlet var segueSwitch: UISwitch!
+
+    @IBAction func yellowButtonTapped(_ sender: Any) {
+        if segueSwitch.isOn {
+            performSegue(withIdentifier: "yellow", sender: nil)
+        }
+    }
+
+    @IBAction func greenButtonTapped(_ sender: Any) {
+        if segueSwitch.isOn {
+            performSegue(withIdentifier: "green", sender: nil)
+        }
     }
 }
 
