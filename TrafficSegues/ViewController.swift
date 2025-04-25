@@ -15,14 +15,24 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet var segueSwitch: UISwitch!
+    
+    @MainActor override func shouldPerformSegue(
+        withIdentifier identifier: String,
+        sender: Any?
+    ) -> Bool {
+        print(identifier)
+        return segueSwitch.isOn
+    }
 
     @IBAction func yellowButtonTapped(_ sender: Any) {
-        if segueSwitch.isOn {
+        print("yellow tapped")
+       // if segueSwitch.isOn {
             performSegue(withIdentifier: "yellow", sender: nil)
-        }
+       // }
     }
 
     @IBAction func greenButtonTapped(_ sender: Any) {
+        print("green tapped")
         if segueSwitch.isOn {
             performSegue(withIdentifier: "green", sender: nil)
         }
